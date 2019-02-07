@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:padding="30dp">
+
+    <LinearLayout
+        android:id="@+id/song_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="歌曲"
+            android:textSize="16dp"
+            android:layout_marginLeft="5dp"
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/textcolor"
+            android:background="@drawable/linearlayoutbg"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/linearlayoutbg"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/roundbg"/>
+
+            <EditText
+                android:id="@+id/song_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/MyEditText"
+                android:hint="请输入要下载的歌曲"
+                android:textColorHint="@color/textcolor"
+                android:textSize="18dp"
+                android:layout_marginLeft="6dp"
+                android:background="@null"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/artist_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/song_linear_layout"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="歌手"
+            android:textSize="16dp"
+            android:layout_marginLeft="5dp"
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/textcolor"
+            android:background="@drawable/linearlayoutbg"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/linearlayoutbg"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/roundbg"/>
+
+            <EditText
+                android:id="@+id/artist_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/MyEditText"
+                android:hint="请输入歌手名字"
+                android:textColorHint="@color/textcolor"
+                android:textSize="18dp"
+                android:layout_marginLeft="6dp"
+                android:background="@null"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/control_ll"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/artist_linear_layout">
+
+        <TextView
+            android:id="@+id/add_song_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="添加歌曲"
+            android:textSize="16dp"
+            android:layout_marginLeft="5dp"
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/textcolor"
+            android:background="@drawable/linearlayoutbg"/>
+
+
+        <TextView
+            android:id="@+id/download_song_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="下载歌曲"
+            android:textSize="16dp"
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/textcolor"
+            android:background="@drawable/linearlayoutbg"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/song_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/control_ll"
+        android:layout_marginTop="20dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>
